@@ -12,7 +12,7 @@ Setup connection to OpenShift Broker
 To create an application using client tools, type the following command:
 
 ```shell
-  rhc app create microserviceproduct diy-0.1
+	rhc app create microserviceproduct diy-0.1
 ```
 
 This command creates an application *microserviceproduct* using *DIY* cartridge and clones the repository to *microserviceproduct* directory.
@@ -22,7 +22,7 @@ This command creates an application *microserviceproduct* using *DIY* cartridge 
 The application we are creating will use PostgreSQL database, hence we need to add appropriate cartridge to the application:
 
 ```shell
-  cd microserviceproduct
+	cd microserviceproduct
 	rhc cartridge add postgresql-9.2
 ```
 
