@@ -37,19 +37,20 @@ After creating the cartridge, it is possible to check its status with the follow
 OpenShift creates a template project that can be freely removed:
 
 ```shell
-  git rm -rf .openshift README.md diy misc
+	git rm -rf .openshift README.md diy misc
+```
 
 Commit the changes:
 
 ```shell
-  git commit -am "Removed template application source code"
+	git commit -am "Removed template application source code"
 ```
 
 # Step 4: Pull Source code from GitHub
 
 ```shell
-  git remote add upstream https://github.com/trifonnt/microservice-sample-product.git
-  git pull -s recursive -X theirs upstream master
+	git remote add upstream https://github.com/trifonnt/microservice-sample-product.git
+	git pull -s recursive -X theirs upstream master
 ```
 
 # Step 5: Push changes
