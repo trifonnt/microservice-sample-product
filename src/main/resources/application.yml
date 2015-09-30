@@ -7,7 +7,5 @@ spring:
   datasource:
     platform: postgresql
     initialize: true
-
-spring:
   jpa:
     generate-ddl: true
