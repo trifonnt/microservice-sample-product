@@ -12,7 +12,7 @@ Setup connection to OpenShift Broker
 To create an application using client tools, type the following command:
 
 ```shell
-  rhc app create microserviceproduct diy-0.1
+	rhc app create microserviceproduct diy-0.1
 ```
 
 This command creates an application *microserviceproduct* using *DIY* cartridge and clones the repository to *microserviceproduct* directory.
@@ -22,7 +22,7 @@ This command creates an application *microserviceproduct* using *DIY* cartridge 
 The application we are creating will use PostgreSQL database, hence we need to add appropriate cartridge to the application:
 
 ```shell
-  cd microserviceproduct
+	cd microserviceproduct
 	rhc cartridge add postgresql-9.2
 ```
 
@@ -37,19 +37,20 @@ After creating the cartridge, it is possible to check its status with the follow
 OpenShift creates a template project that can be freely removed:
 
 ```shell
-  git rm -rf .openshift README.md diy misc
+	git rm -rf .openshift README.md diy misc
+```
 
 Commit the changes:
 
 ```shell
-  git commit -am "Removed template application source code"
+	git commit -am "Removed template application source code"
 ```
 
 # Step 4: Pull Source code from GitHub
 
 ```shell
-  git remote add upstream https://github.com/trifonnt/microservice-sample-product.git
-  git pull -s recursive -X theirs upstream master
+	git remote add upstream https://github.com/trifonnt/microservice-sample-product.git
+	git pull -s recursive -X theirs upstream master
 ```
 
 # Step 5: Push changes
