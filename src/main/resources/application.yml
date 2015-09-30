@@ -1,8 +1,8 @@
 management:
-#  contextPath: /manage
   context-path: /manage
-#spring.datasource.platform = hsqldb
+#  contextPath: /manage
 
+#spring.datasource.platform = hsqldb
 spring:
   datasource:
     platform: postgresql
