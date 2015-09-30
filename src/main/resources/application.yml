@@ -1,2 +1,13 @@
 management:
-    contextPath:    /manage
+#  contextPath: /manage
+  context-path: /manage
+#spring.datasource.platform = hsqldb
+
+spring:
+  datasource:
+    platform: postgresql
+    initialize: true
+
+spring:
+  jpa:
+    generate-ddl: true
