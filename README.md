@@ -19,6 +19,7 @@ OR
 
 ```shell
 	rhc create-app microserviceproduct diy-0.1 --from-code git@github.com:trifonnt/microservice-sample-product.git
+	rhc create-app microserviceproduct diy-0.1 --no-git
 ```
 
 This command creates an application *microserviceproduct* using *DIY* cartridge and clones the repository to *microserviceproduct* directory.
