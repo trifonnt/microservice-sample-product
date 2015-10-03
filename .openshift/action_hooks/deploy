@@ -43,4 +43,4 @@ export JDK=${OPENSHIFT_DATA_DIR}${JAVA_HOME}/bin
 
 export PATH=$JDK:$M2:$PATH
 
-mvn -s settings.xml clean install
+mvn -s settings.xml clean install -DskipTests=true
