@@ -5,34 +5,30 @@ set -x
 export MAVEN_HOME=maven
 readonly JAVA_HOME=jdk8
 
-if [ ! -d ${OPENSHIFT_DATA_DIR}m2/repository ]
-        then
-                cd $OPENSHIFT_DATA_DIR
-				mkdir m2/repository                
+if [ ! -d ${OPENSHIFT_DATA_DIR}m2/repository ] then
+	cd $OPENSHIFT_DATA_DIR
+	mkdir m2/repository                
 fi
 
-if [ ! -d ${OPENSHIFT_DATA_DIR}logs ]
-        then
-                cd $OPENSHIFT_DATA_DIR
-				mkdir logs
+#if [ ! -d ${OPENSHIFT_DATA_DIR}logs ] then
+#	cd $OPENSHIFT_DATA_DIR
+#	mkdir logs
+#fi
+
+if [ ! -d ${OPENSHIFT_DATA_DIR}$JAVA_HOME ] then
+	cd $OPENSHIFT_DATA_DIR
+	wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60-linux-x64.tar.gz
+	tar xvf *.tar.gz
+	rm -f *.tar.gz
+	mv jdk1.8.0_60 $JAVA_HOME
 fi
 
-if [ ! -d ${OPENSHIFT_DATA_DIR}$JAVA_HOME ]
-        then
-                cd $OPENSHIFT_DATA_DIR
-                wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60-linux-x64.tar.gz
-                tar xvf *.tar.gz
-                rm -f *.tar.gz
-                mv jdk1.8.0_60 $JAVA_HOME
-fi
-
-if [ ! -d ${OPENSHIFT_DATA_DIR}$MAVEN_HOME ]
-        then
-                cd $OPENSHIFT_DATA_DIR
-                wget http://mirror.cc.columbia.edu/pub/software/apache/maven/maven-3/3.3.3/binaries/apache-maven-3.3.3-bin.tar.gz
-                tar xvf *.tar.gz
-                rm -f *.tar.gz
-                mv apache-maven-3.3.3 $MAVEN_HOME
+if [ ! -d ${OPENSHIFT_DATA_DIR}$MAVEN_HOME ] then
+	cd $OPENSHIFT_DATA_DIR
+	wget http://mirror.cc.columbia.edu/pub/software/apache/maven/maven-3/3.3.3/binaries/apache-maven-3.3.3-bin.tar.gz
+	tar xvf *.tar.gz
+	rm -f *.tar.gz
+	mv apache-maven-3.3.3 $MAVEN_HOME
 fi
 
 
