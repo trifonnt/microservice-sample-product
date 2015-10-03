@@ -15,6 +15,12 @@ To create an application using client tools, type the following command:
 	rhc app create microserviceproduct diy-0.1
 ```
 
+OR
+
+```shell
+	rhc create-app microserviceproduct diy-0.1 --from-code git@github.com:trifonnt/microservice-sample-product.git
+```
+
 This command creates an application *microserviceproduct* using *DIY* cartridge and clones the repository to *microserviceproduct* directory.
 
 # Step 2: Add PostgreSQL cartridge to application
