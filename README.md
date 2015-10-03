@@ -15,7 +15,7 @@ To create an application using client tools, type the following command:
 	rhc app create microserviceproduct diy-0.1
 ```
 
-OR
+OR -- DO NTO USE IT FOR NOW
 
 ```shell
 	rhc create-app microserviceproduct diy-0.1 --from-code git@github.com:trifonnt/microservice-sample-product.git
