@@ -56,16 +56,7 @@
 		</dependency>
   </dependencies>
 
-  <pluginRepositories>
-    <pluginRepository>
-      <id>spring-snapshots</id>
-      <url>http://repo.spring.io/libs-snapshot/</url>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </pluginRepository>
-  </pluginRepositories>
-  <repositories>
+	<repositories>
     <repository>
       <id>spring-snapshots</id>
       <url>https://repo.spring.io/snapshot/</url>
@@ -80,7 +71,16 @@
         <enabled>true</enabled>
       </snapshots>
     </repository>
-  </repositories>
+	</repositories>
+	<pluginRepositories>
+    <pluginRepository>
+      <id>spring-snapshots</id>
+      <url>http://repo.spring.io/libs-snapshot/</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </pluginRepository>
+	</pluginRepositories>
 
   <build>
     <plugins>
