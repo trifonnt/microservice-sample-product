@@ -9,24 +9,25 @@ import static javax.persistence.GenerationType.AUTO;
 @Entity
 public class Product {
 
-    @Id
-    @GeneratedValue(strategy = AUTO)
-    private long id;
+	@Id
+	@GeneratedValue(strategy = AUTO)
+	private long id;
 
-    private String name;
+	private String name;
 
-    public Product() {}
+	public Product() {
+	}
 
-    public Product(long id, String name) {
-        this.id = id;
-        this.name = name;
-    }
+	public Product(long id, String name) {
+		this.id = id;
+		this.name = name;
+	}
 
-    public long getId() {
-        return id;
-    }
+	public long getId() {
+		return id;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public String getName() {
+		return name;
+	}
 }
