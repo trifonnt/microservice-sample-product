@@ -82,3 +82,9 @@ You can now browse to: http://microserviceproduct-<namespace>.rhcloud.com/manage
 	}
 
 You can then browse to "/" to see the API root resource.
+
+URLs
+	http://localhost:8080/products
+	
+	user: user
+	password: <GENERATED on startup>
